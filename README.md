@@ -1,6 +1,6 @@
 https://minikhey.alwaysdata.net
 
-Fonctions du projet : 
+Fonctions du projet :
 
 •	L’enregistrement et la suppression de livres.  
 •	La recherche de livres disponibles.  
