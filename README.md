@@ -1,4 +1,4 @@
-minikhey.alwaysdata.net
+https://minikhey.alwaysdata.net
 
 Fonctions du projet : 
 
