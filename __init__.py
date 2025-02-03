@@ -45,20 +45,6 @@ def login():
     
     return render_template('login.html')
 
-@app.route('/dashboard')
-def dashboard():
-    if 'user_id' not in session:
-        return redirect(url_for('login'))  # Si l'utilisateur n'est pas connecté, rediriger vers la page de connexion
-
-    # Connexion à la base de données pour récupérer des informations utilisateur
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute('SELECT * FROM Utilisateurs WHERE id_utilisateur = ?', (session['user_id'],))
-    utilisateur = cursor.fetchone()
-    conn.close()
-
-    return render_template('dashboard.html', utilisateur=utilisateur)
-
 @app.route('/logout')
 def logout():
     session.clear()  # Déconnecte l'utilisateur
